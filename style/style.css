@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
-    --color-primario: #FF6B00;
-    --color-secundario: #0D47A1;
-    --color-terceario: #1B1B1B;
+    --color-primario: #000000;
+    --color-secundario: #ffffff;
+    --color-terceario: #c2c2c2;
+    --color-resaltar: #1f1f1f;
     
 
 
-    --fuente-titulos: "Krona one", sans-serif;
-    --fuente-texto: "Montserrat", sans-serif; 
+    --fuente-titulos: "Montserrat", sans-serif;
+    --fuente-texto: "Krona one", sans-serif;
 
 }
 
@@ -19,8 +20,11 @@
 }
 
 .header{
-    background-color: var(--color-terceario);
-    padding: 0% 0 0 17%;
+    display: flex;
+    background-color: var(--color-primario);
+    padding: 0 0 10px 17%;
+    align-items: center;
+    
 }
 
 .header__menu{
@@ -33,9 +37,31 @@
 
 .header__menu__link{
     font-family: "Montserrat", sans-serif; 
-    color: white;
+    color: var(--color-secundario);
     font-size: 24px;
-    
+    text-decoration: none;
+    position: relative;
+    padding: 0 0 0 9px;
+}
+
+.header__menu__link:hover {
+  color: var(--color-terceario); /* Naranja de tu paleta */
+}
+
+/* Línea animada debajo del link */
+.header__menu__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-terceario); /* mismo color que el hover */
+  transition: width 0.3s ease;
+}
+
+.header__menu__link:hover::after {
+  width: 100%; /* Se extiende la línea al hacer hover */
 }
 
 
@@ -53,7 +79,7 @@
 }
 
 .inicio__fondo{
-background-image: url(../assets/fondo.jpg);
+background-image: url(../assets/prueba1.jpg);
 height: 100vh;
 background-repeat: no-repeat;
 background-size: cover;
@@ -72,45 +98,43 @@ filter: blur(4px);
 }
 
 .inicio__contenido{
+    display: flex;
+    flex-direction: column;
     position: relative;
     z-index: 1;
+    align-items: center;
+    gap: 20px;
 }
 
 
 .inicio__contenido__titulo{
-    font-family:'Bebas Neue', sans-serif;
-    font-size: 3rem;
-    color: var(--color-primario);
-    font-weight: 400;
-    text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
-}
-
-.inicio__contenido__texto{
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
-    max-width: 600px;
+    font-family:var(--fuente-titulos);
+    font-size: 80px;
     color: white;
-    margin: 0 auto;
-    line-height: 1.6;
+    font-weight: 800;
+    text-align: center;
 }
 
 .inicio__link{
-    display: flex;
-    font-family: var(--fuente-texto);
+    font-family: var(--fuente-titulos);
     font-weight: 600;
-    color: white;
-    padding: 12px 24px ;
-    background-color: var(--color-primario);
-    text-decoration: none;
+    font-size: 20px;
+    color: var(--color-primario);
+    background-color:var(--color-terceario);
+    border-radius: 60px;
+    width: 160px;
+    padding: 16px;
     text-align: center;
-    justify-content: center;
-    border-radius: 8px;
-    gap: 20px;
-    margin: 30px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
+    text-decoration: none;
 }
+
+.inicio__link:hover{
+    transform: translateY(-3px); /* Eleva un poco el botón */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* Sombra elegante */
+    opacity: 0.9; /* Un poco de transparencia */
+}
+
+
 
 .sobre-Nosotros{
 display: flex;
@@ -118,13 +142,15 @@ justify-content: center;
 align-items:flex-start;
 padding: 98px 10%;
 gap: 80px;
-
+background-color: var(--color-resaltar);
 }
 
 .sobre-Nosotros__contenido{
     display: flex;
     flex-direction: column;
     gap: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -132,6 +158,7 @@ gap: 80px;
     flex-shrink: 0;
     max-width: 400px;
     margin-left: -35px;
+    
 }
 
 .sobre-Nosotros__contenido__imagen-entrenador{
@@ -141,7 +168,39 @@ gap: 80px;
     object-fit: cover;
 }
 
+.sobre-nosotros__contenido__links{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    text-decoration: none;
+}
 
+.sobre-nosotros__contenido__links__etiquetas{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-family: var(--fuente-titulos);
+    font-weight: 500;
+    font-size: 15px;
+    background-color: var(--color-terceario);
+    color: var(--color-primario);
+    border-radius: 50px;
+    width: 140px;
+    gap:8px ;
+    height: 50px;
+    padding-left: 10px;
+}
+
+.sobre-nosotros__contenido__links__etiquetas:hover{
+    transform: translateY(-3px); /* Eleva un poco el botón */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* Sombra elegante */
+    opacity: 0.9; /* Un poco de transparencia */
+}
+
+.sobre-nosotros__contenido__links__etiquetas img{
+    width: 20px;
+    height: auto;
+}
 
 .sobre-Nosotros__descripcion{
     display: flex;
@@ -153,13 +212,16 @@ gap: 80px;
 
 .sobre-Nosotros__descripcion__titulo{
     font-family: var(--fuente-titulos);
-    font-size: 37.3px;
-    font-weight: 600;
+    font-size: 35px;
+    font-weight: 800;
+    color: var(--color-secundario);
 }
+
 .sobre-Nosotros__descripcion__texto{
     font-family: var(--fuente-texto);
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
+    color: var(--color-secundario);
 }
 
 /* Responsividad */
