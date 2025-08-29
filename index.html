@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style/style.css">
+   
 </head>
 <body>
     <header class="header">
         <nav class="header__menu">
             <a class="header__menu__link" href="#inicio">inicio</a>
             <a class="header__menu__link" href="#sobre-Nosotros">sobre nosotros</a>
-            <a class="header__menu__link">conctacto</a>
+            <a class="header__menu__link" href="#contacto">conctacto</a>
         </nav>
     </header>
     
@@ -23,15 +24,81 @@
             
             <div class="inicio__contenido">
                 <h1 class="inicio__contenido__titulo">
-                    <strong>Academia EK</strong>
+                    De principiante a <strong class="titulo__resalte">jugador estrella</strong>
                 </h1>
-                <a class="inicio__link">contactanos</a>
+                <p class="inicio__contenido__suptitulo">
+                    Academia de básquetbol que impulsa tu rendimiento, disciplina y pasión.
+                </p>
+
+                <a class="inicio__link" href="#contacto">Emepiza hoy</a>
+                
             </div>
 
            
         </section>
     </main>
     
+    <section class = "beneficios">
+        <div class= "beneficios__container">
+
+            <div class= "beneficio">
+                <h2 class="beneficio__titulo">
+                    Eventos deportivos
+                </h2>
+                <p class="beneficio__texto">
+                    Entrenamientos de técnica, noches de retas, torneos relámpago, partidos amistosos y más.
+                </p>
+                <img src="assets/calendario.png">
+            </div>
+
+            <div class= "beneficio">
+                <h2 class="beneficio__titulo">
+                    Multiples horarios
+                </h2>
+                <p class="beneficio__texto">
+                    Horarios “Work friendly” después de las 7pm y fines de semana pensados para personas con agenda llena.
+                </p>
+                <img src="assets/reloj.png">
+            </div>
+
+            <div class= "beneficio">
+                <h2 class="beneficio__titulo">
+                    Equipo incluido
+                </h2>
+                <p class="beneficio__texto">
+                    Las mejor cancha, equipo profesional, balones, conos, instalaciones comodas para los visitantes,
+                    baños
+                </p>
+                <img src ="assets/baloncesto.png">
+            </div>
+        </div>
+    </section>
+    
+    <section class ="que-somos">
+        <div class ="que-somos__contenido">
+            <h2 class ="que-somos__contenido__titulo">
+                ¿Quienes somos?
+            </h2>
+            <p class ="que-somos__contenido__texto">
+                somos una academia de basquetbol listos para ayudarte a alcanzar tu maximo potencial 
+                unete a nosotros para que descubras la mejor experincia 
+            </p>
+        </div>
+
+        <div class="carrusel">
+            <div class ="carrusel__imagenes">
+                <img src="assets/fondo.jpg" class="active">
+                <img src="assets/fondo3.jpg">
+                <img src="assets/fondo4.jpg">
+            </div>
+
+         <!-- Botones -->
+            <button class="carrusel__boton prev">⬅</button>
+            <button class="carrusel__boton next">➡</button>
+        </div>
+
+    </section>
+
     <section class="sobre-Nosotros" id="sobre-Nosotros"> 
 
         <div class="sobre-Nosotros__contenido">       
@@ -41,11 +108,11 @@
 
             <div class= "sobre-nosotros__contenido__links">
                     <a class="sobre-nosotros__contenido__links__etiquetas" href="https://www.instagram.com/ernesto_gonzalez3173/"> 
-                        <img src="assets/instagram-logo-black-transparent.png">instagram</a>
+                        <img src="assets/instagram.png">instagram</a>
                     <a class="sobre-nosotros__contenido__links__etiquetas" href="https://www.facebook.com/neto.p.gonzalez?locale=es_LA">
                         <img src="assets/facebook.png">facebook</a>
                     <a class="sobre-nosotros__contenido__links__etiquetas" href="https://wa.me/553318771065">
-                        <img src="assets/whatsapp.png">whatsapp</a>
+                        <img src="assets/charla.png">whatsapp</a>
             </div>
         </div>             
 
@@ -64,10 +131,69 @@
             </p >
         </div>
     </section>
+
+    <section id="contacto" class="contacto">
+        <h2 class="contacto__titulo">Inscríbete</h2>
+  
+        <form action="https://formspree.io/f/tu-endpoint" method="POST" class="contacto__formulario">
+            <!-- Nombre -->
+            <div class="form__grupo">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+            </div>
+
+            <!-- Correo -->
+            <div class="form__grupo">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+            </div>
+
+            <!-- Mensaje -->
+            <div class="form__grupo">
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos tu objetivo en el básquet..." required></textarea>
+            </div>
+
+            <!-- Botón -->
+            <button type="submit" class="contacto__boton">Enviar</button>
+        </form>
+    </section>
     
-    <footer>
+    <footer class="footer">
+  <div class="footer__container">
+    
+    <!-- Columna 1 -->
+    <div class="footer__col">
+      <h3>Academia de Básquet</h3>
+      <p>Formando jugadores con disciplina, pasión y excelencia.</p>
+    </div>
 
-    </footer>
+    <!-- Columna 2 -->
+    <div class="footer__col">
+      <h4>Enlaces</h4>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre-Nosotros">Sobre nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
 
+    <!-- Columna 3 -->
+    <div class="footer__col">
+      <h4>Síguenos</h4>
+      <div class="footer__redes">
+        <a href="https://www.instagram.com/ernesto_gonzalez3173/"><img src="assets/instagram.png" alt="Instagram"></a>
+        <a href="https://www.facebook.com/neto.p.gonzalez?locale=es_LA"><img src="assets/facebook.png" alt="Facebook"></a>
+        <a href="https://wa.me/553318771065"><img src="assets/charla.png" alt="Whatsapp"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__copy">
+    © 2025 Academia de Básquet | Todos los derechos reservados
+  </div>
+</footer>
+
+     <script src="script.js"></script>
 </body>
 </html>
