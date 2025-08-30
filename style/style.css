@@ -17,6 +17,14 @@
     box-sizing: border-box;
 }
 
+
+
+img { 
+  max-width: 100%;   /*  asegura que imágenes nunca se desborden */
+  height: auto;      /*  conserva proporciones */
+  display: block;
+}
+
 .header{
     justify-content: center;
     align-items: center;
@@ -232,6 +240,7 @@ filter: blur(4px) brightness(0.6);
     flex-direction: row;
     gap: 50px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .beneficio{
@@ -297,7 +306,7 @@ filter: blur(4px) brightness(0.6);
     flex-direction: column;
     gap:15px;
     width: 50%;
-    padding: 0 0 0 70px;
+    padding: 0 20px;
 }
 
 .que-somos__contenido__titulo{
@@ -496,6 +505,7 @@ background-color: var(--color-secundario);
   border-radius: 15px;
   backdrop-filter: blur(8px);
   box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  width: 90%;
 }
 
 .form__grupo {
@@ -570,6 +580,15 @@ background-color: var(--color-secundario);
   margin-bottom: 30px;
 }
 
+
+@media (max-width: 600px) {
+  .footer__container {
+    grid-template-columns: 1fr; /* 👈 una columna en móviles */
+    text-align: center;
+  }
+}
+
+
 .footer__col h3, 
 .footer__col h4 {
   font-family: var(--fuente-titulos);
@@ -624,5 +643,14 @@ background-color: var(--color-secundario);
         align-items: center;
         text-align: center;
         padding: 40px 20px;
+    }
+
+     .sobre-Nosotros__descripcion {
+        width: 100%;   /* 👈 que ocupe toda la pantalla */
+        padding: 0 10px;
+    }
+.sobre-nosotros__contenido__links {
+        flex-wrap: wrap; /* 👈 botones en varias filas si no caben */
+        justify-content: center;
     }
 }
